@@ -14,8 +14,9 @@ jobs:
       - name: Checkout repo gpt4all
         uses: actions/checkout@v4
         with:
-          repository: nomic-ai/gpt4all@main
+          repository: nomic-ai/gpt4all
           path: gpt4all
+          ref: main
           
       - name: Checkout repo
         uses: actions/checkout@v4
