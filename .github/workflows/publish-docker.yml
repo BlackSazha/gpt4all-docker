@@ -14,11 +14,13 @@ jobs:
       - name: Checkout repo gpt4all
         uses: actions/checkout@v4
         with:
-          repository: nomic-ai/gpt4all
+          repository: nomic-ai/gpt4all@main
           path: gpt4all
           
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          path: main
         
       - name: Login docker
         uses: docker/login-action@v3
@@ -33,6 +35,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./gpt4all
-          file: ./Dockerfile
+          file: ./main/Dockerfile
           push: true
           tags: gpt4all:latest
