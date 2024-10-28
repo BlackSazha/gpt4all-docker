@@ -23,6 +23,6 @@ jobs:
       - name: build and push
         uses: docker/build-push-action@v6
         with:
-          context: Dockerfile.cli
+          context: ./Dockerfile.cli
           push: true
           tags: gpt4all:latest
