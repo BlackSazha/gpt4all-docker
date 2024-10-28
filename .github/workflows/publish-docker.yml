@@ -32,7 +32,7 @@ jobs:
       - name: build and push
         uses: docker/build-push-action@v6
         with:
-          context: .
-          file: Dockerfile
+          context: ./gpt4all
+          file: ./Dockerfile
           push: true
           tags: gpt4all:latest
