@@ -17,7 +17,7 @@ COPY gpt4all-backend /gpt4all/gpt4all-backend
 RUN mkdir /gpt4all/gpt4all-backend/build
 WORKDIR /gpt4all/gpt4all-backend/build
 RUN cmake ..
-RUN cmake --build . --parallel
+RUN cmake --build . --parallel -DLLMODEL_CUDA=OFF
 
 # Confirm that libllmodel.* exists in gpt4all-backend/build.
 
