@@ -28,6 +28,9 @@ jobs:
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
 
+      - name: test
+        run: la
+
       - name: build and push
         uses: docker/build-push-action@v6
         with:
