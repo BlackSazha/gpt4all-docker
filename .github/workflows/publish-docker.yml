@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          repository: https://github.com/nomic-ai/gpt4all.git
         
       - name: Login docker
         uses: docker/login-action@v3
